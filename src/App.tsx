@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
+import { Card } from "./components/card/index";
+
 function App() {
   const [content, setContent] = useState<string>("");
 
@@ -12,7 +13,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <ReactMarkdown children={content} />
+      <Card contentMarkdown={content} />
     </div>
   );
 }
