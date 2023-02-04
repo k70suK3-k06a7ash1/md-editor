@@ -1,6 +1,6 @@
 import { FC, useReducer } from "react";
-import ReactMarkdown from "react-markdown";
-
+import { EditMode } from "./mode/edit";
+import { DisplayMode } from "./mode/display";
 type Props = {
   contentMarkdown: string;
 };
@@ -13,29 +13,17 @@ export const Card: FC<Props> = ({ contentMarkdown }) => {
   return (
     <>
       {isEdit ? (
-        <div>
-          <button
-            onClick={() => {
-              toggleIsEdit();
-            }}
-          >
-            Edit
-          </button>
-          <div>
-            <textarea>{contentMarkdown}</textarea>
-          </div>
-        </div>
+        //   Edit Mode
+        <EditMode
+          toggleIsEdit={toggleIsEdit}
+          contentMarkdown={contentMarkdown}
+        />
       ) : (
-        <div>
-          <button
-            onClick={() => {
-              toggleIsEdit();
-            }}
-          >
-            Edit
-          </button>
-          <ReactMarkdown children={contentMarkdown} />
-        </div>
+        // diplay Mode
+        <DisplayMode
+          toggleIsEdit={toggleIsEdit}
+          contentMarkdown={contentMarkdown}
+        />
       )}
     </>
   );
