@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
 import { separateH1 } from "./libs/separateH1";
-
+import { Card } from "./components/card/index";
 
 function App() {
   const [content, setContent] = useState<string>("");
@@ -14,13 +13,11 @@ function App() {
     });
   }, []);
 
-
   if (content) separateH1(content);
-
 
   return (
     <div className="App">
-      <ReactMarkdown children={content} />
+      <Card contentMarkdown={content} />
     </div>
   );
 }
