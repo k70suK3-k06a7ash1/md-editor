@@ -41,6 +41,5 @@ export const splitByTag = (
       ? result?.push([row])
       : result[result.length - 1]?.push(row);
   }
-  console.log(result);
   return result?.map((element) => element.join("\n"));
 };
