@@ -1,16 +1,13 @@
 export const separateH1 = (content: string) => {
-  const splitContent = content.split("\n");
-  const separatedSection: string[][] = []
-  let current = -1
-  splitContent.map((row) => {
-    if (/# /.test(row)) {
-      current += 1
-      const newRow: string[] = []
-      newRow.push(row)
-      separatedSection.push(newRow)
-    } else {
-      separatedSection[current]?.push(row)
-    }
-  })
-  return separatedSection
-}
+  const splitCotent = content.split("\n");
+  const pattern = /^\#{1}(?=\s)(.*)$/;
+  const result: string[][] = [];
+
+  for (let row of splitCotent) {
+    row.match(pattern)
+      ? result.push([row])
+      : result[result.length - 1].push(row);
+  }
+
+  return result.map((element) => element.join("\n"));
+};

@@ -12,7 +12,7 @@ export const EditMode: FC<CardProps> = ({ toggleIsEdit, contentMarkdown }) => {
         Save
       </button>
       <div>
-        <textarea>{contentMarkdown}</textarea>
+        <textarea defaultValue={contentMarkdown} />
       </div>
     </div>
   );
