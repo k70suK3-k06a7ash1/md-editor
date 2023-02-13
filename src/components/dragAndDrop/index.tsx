@@ -1,6 +1,5 @@
 import React, { FC, useRef, useState } from "react";
 import { splitByTag } from "../../libs/splitByTag";
-// import "./index.css";
 import { Card } from "../card/index";
 
 type Props = {
