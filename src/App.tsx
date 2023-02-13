@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
-import { splitByTag } from "./libs/splitByTag";
+import { useState } from "react";
 import { useDragComponents } from "./components/dragAndDrop";
-
+import { FrameComponent } from "./layouts/Frame";
 function App() {
   const [contents, setContents] = useState<string[]>([]);
   // setContents();
@@ -17,7 +16,9 @@ function App() {
   const { DragAndDropArea } = useDragComponents();
   return (
     <div className="App">
-      <DragAndDropArea />
+      <FrameComponent>
+        <DragAndDropArea />
+      </FrameComponent>
     </div>
   );
 }
