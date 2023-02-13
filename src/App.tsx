@@ -1,19 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { RecoilRoot, useRecoilState } from "recoil";
 import { useDragComponents } from "./components/dragAndDrop";
 import { FrameComponent } from "./layouts/Frame";
+import { MarkdownState } from "./recoil/atoms/markdown";
 function App() {
-  const [contents, setContents] = useState<string[]>([]);
-  // setContents();
-  // useEffect(() => {
-  //   import("./base.md").then((response) => {
-  //     fetch(response.default)
-  //       .then((response) => response.text())
-  //       .then((text) => );
-  //   });
-  // }, []);
+  const [markdown] = useRecoilState(MarkdownState);
 
-  console.log(contents);
-  const { DragAndDropArea } = useDragComponents();
+  const { DragAndDropArea, setItems } = useDragComponents({
+    contents: markdown,
+  });
+
+  useEffect(() => {
+    setItems(markdown);
+  }, [markdown]);
+
   return (
     <div className="App">
       <FrameComponent>
