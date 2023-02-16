@@ -1,11 +1,13 @@
-import { FC, useReducer } from "react";
+import { Dispatch, FC, useReducer } from "react";
 import { EditMode } from "./mode/edit";
 import { DisplayMode } from "./mode/display";
+import { ContentType } from "../../types/ContentType";
 type Props = {
-  contentMarkdown: string;
+  content: ContentType;
+  updateDragList: Dispatch<ContentType>;
 };
 
-export const Card: FC<Props> = ({ contentMarkdown }) => {
+export const Card: FC<Props> = ({ content, updateDragList }) => {
   const [isEdit, toggleIsEdit] = useReducer((state) => {
     return !state;
   }, false);
@@ -15,14 +17,15 @@ export const Card: FC<Props> = ({ contentMarkdown }) => {
       {isEdit ? (
         //   Edit Mode
         <EditMode
+          updateDragList={updateDragList}
           toggleIsEdit={toggleIsEdit}
-          contentMarkdown={contentMarkdown}
+          content={content}
         />
       ) : (
         // diplay Mode
         <DisplayMode
           toggleIsEdit={toggleIsEdit}
-          contentMarkdown={contentMarkdown}
+          contentMarkdown={content.content}
         />
       )}
     </>

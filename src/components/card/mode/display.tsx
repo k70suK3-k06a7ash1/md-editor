@@ -1,12 +1,15 @@
-import { FC } from "react";
-import { CardProps } from "../../../types/card/index";
+import { DispatchWithoutAction, FC } from "react";
 import ReactMarkdown from "react-markdown";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
 
-export const DisplayMode: FC<CardProps> = ({
+type DisplayCardProps = {
+  toggleIsEdit: DispatchWithoutAction;
+  contentMarkdown: string;
+};
+export const DisplayMode: FC<DisplayCardProps> = ({
   toggleIsEdit,
   contentMarkdown,
 }) => {

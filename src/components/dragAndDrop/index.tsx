@@ -1,7 +1,7 @@
 import React, { FC, useRef, useState } from "react";
 import { splitByTag } from "../../libs/splitByTag";
 import { Card } from "../card/index";
-
+import { ContentType } from "../../types/ContentType";
 type Props = {
   contents: string;
 };
@@ -10,28 +10,13 @@ type PositonObject = {
   primaryKey: string | null;
 };
 
-type ContentType = {
-  id: number;
-  content: string;
-};
-
-// const md = `# test
-
-// ## test test
-
-// # second
-
-// ## www
-// `;
-
 export const useDragComponents = ({ contents }: Props) => {
-  //console.log(contents);
-  console.log("#");
   const origin = splitByTag(contents);
 
   const beNamedList = origin?.map((content, index) => {
     return { id: index, content: content };
   });
+  const [dragList, setDragList] = useState<ContentType[]>(beNamedList);
 
   const setItems = (contents: string) => {
     const origin = splitByTag(contents);
@@ -43,7 +28,10 @@ export const useDragComponents = ({ contents }: Props) => {
     setDragList(beNamedList);
   };
 
-  const [dragList, setDragList] = useState<ContentType[]>(beNamedList);
+  const updateDragList = (content: ContentType) => {
+    dragList[content.id] = content;
+    setDragList([...dragList]);
+  };
 
   const DraggingObjectState = useRef<PositonObject>({
     primaryKey: null,
@@ -116,7 +104,7 @@ export const useDragComponents = ({ contents }: Props) => {
             onDragStart={handleDragStart}
             onDragOver={handleDragOver}
           >
-            <Card contentMarkdown={contentObject.content} />
+            <Card content={contentObject} updateDragList={updateDragList} />
           </div>
         );
       })}
