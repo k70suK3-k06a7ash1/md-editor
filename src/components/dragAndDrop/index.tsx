@@ -8,7 +8,7 @@ type Props = {
   contents: string;
 };
 
-type PositonObject = {
+type PositionObject = {
   primaryKey: string | null;
 };
 
@@ -21,7 +21,6 @@ export const useDragComponents = ({ contents }: Props) => {
 
     const beNamedList = makeBeNamedList(contents)
 
-
     setDragList(beNamedList);
   };
 
@@ -30,10 +29,10 @@ export const useDragComponents = ({ contents }: Props) => {
     setDragList([...dragList]);
   };
 
-  const draggingObjectState = useRef<PositonObject>({
+  const draggingObjectState = useRef<PositionObject>({
     primaryKey: null,
   });
-  const beDraggedObjectState = useRef<PositonObject>({
+  const beDraggedObjectState = useRef<PositionObject>({
     primaryKey: null,
   });
   const handleDragOver = (event: React.DragEvent) => {
@@ -68,7 +67,7 @@ export const useDragComponents = ({ contents }: Props) => {
     const hoveredElementPrimaryKey: string | null =
       event.currentTarget.getAttribute("primary-key");
     const draggingElementPrimaryKey: string | null =
-      DraggingObjectState.current.primaryKey;
+      draggingObjectState.current.primaryKey;
     const hoveredElementIndex: number = dragList.findIndex(
       (contentObject: ContentType) => {
         return contentObject.id == Number(hoveredElementPrimaryKey);
