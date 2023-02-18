@@ -33,12 +33,12 @@ export const useDragComponents = ({ contents }: Props) => {
   const DraggingObjectState = useRef<PositonObject>({
     primaryKey: null,
   });
-  const beDragedObjectState = useRef<PositonObject>({
+  const beDraggedObjectState = useRef<PositonObject>({
     primaryKey: null,
   });
   const handleDragOver = (event: React.DragEvent) => {
     event.preventDefault();
-    beDragedObjectState.current.primaryKey =
+    beDraggedObjectState.current.primaryKey =
       event.currentTarget.getAttribute("primary-key");
   };
   const handleDragStart = (event: React.DragEvent) => {
