@@ -30,7 +30,7 @@ export const useDragComponents = ({ contents }: Props) => {
     setDragList([...dragList]);
   };
 
-  const DraggingObjectState = useRef<PositonObject>({
+  const draggingObjectState = useRef<PositonObject>({
     primaryKey: null,
   });
   const beDraggedObjectState = useRef<PositonObject>({
@@ -42,7 +42,7 @@ export const useDragComponents = ({ contents }: Props) => {
       event.currentTarget.getAttribute("primary-key");
   };
   const handleDragStart = (event: React.DragEvent) => {
-    DraggingObjectState.current.primaryKey =
+    draggingObjectState.current.primaryKey =
       event.currentTarget.getAttribute("primary-key");
   };
 
