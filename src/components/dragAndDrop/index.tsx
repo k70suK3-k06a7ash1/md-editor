@@ -2,6 +2,8 @@ import React, { FC, useRef, useState } from "react";
 import { splitByTag } from "../../libs/splitByTag";
 import { Card } from "../card/index";
 import { ContentType } from "../../types/ContentType";
+import { makeBeNamedList } from "../../libs/feature/dragAndDrop/makeBeNamedList";
+
 type Props = {
   contents: string;
 };
@@ -11,19 +13,14 @@ type PositonObject = {
 };
 
 export const useDragComponents = ({ contents }: Props) => {
-  const origin = splitByTag(contents);
 
-  const beNamedList = origin?.map((content, index) => {
-    return { id: index, content: content };
-  });
+  const beNamedList = makeBeNamedList(contents)
   const [dragList, setDragList] = useState<ContentType[]>(beNamedList);
 
   const setItems = (contents: string) => {
-    const origin = splitByTag(contents);
 
-    const beNamedList = origin?.map((content, index) => {
-      return { id: index, content: content };
-    });
+    const beNamedList = makeBeNamedList(contents)
+
 
     setDragList(beNamedList);
   };
@@ -60,8 +57,8 @@ export const useDragComponents = ({ contents }: Props) => {
         index === replaceIndex
           ? originalArray[beReplacedIndex]
           : index === beReplacedIndex
-          ? originalArray[replaceIndex]
-          : element,
+            ? originalArray[replaceIndex]
+            : element,
       ],
       []
     );
