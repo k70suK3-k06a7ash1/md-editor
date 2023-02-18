@@ -4,14 +4,14 @@ import { Card } from "../card/index";
 import { ContentType } from "../../types/ContentType";
 import { makeBeNamedList } from "../../libs/feature/dragAndDrop/makeBeNamedList";
 import { getElementIndex } from "../../libs/feature/dragAndDrop/getElementIndex";
+import { PositionType } from "../../types/PositionType";
+import { handleDrag } from "../../libs/feature/dragAndDrop/handleDrag";
 
 type Props = {
   contents: string;
 };
 
-type PositionObject = {
-  primaryKey: string | null;
-};
+
 
 export const useDragComponents = ({ contents }: Props) => {
 
@@ -30,20 +30,19 @@ export const useDragComponents = ({ contents }: Props) => {
     setDragList([...dragList]);
   };
 
-  const draggingObjectState = useRef<PositionObject>({
-    primaryKey: null,
+  const draggingObjectState = useRef<PositionType>({
+    point: null,
   });
-  const beDraggedObjectState = useRef<PositionObject>({
-    primaryKey: null,
+  const beDraggedObjectState = useRef<PositionType>({
+    point: null,
   });
+
   const handleDragOver = (event: React.DragEvent) => {
-    event.preventDefault();
-    beDraggedObjectState.current.primaryKey =
-      event.currentTarget.getAttribute("primary-key");
+    handleDrag(event, beDraggedObjectState, 'over')
   };
+
   const handleDragStart = (event: React.DragEvent) => {
-    draggingObjectState.current.primaryKey =
-      event.currentTarget.getAttribute("primary-key");
+    handleDrag(event, draggingObjectState, 'start')
   };
 
   const replaceArrayElements = (
@@ -68,7 +67,7 @@ export const useDragComponents = ({ contents }: Props) => {
     const hoveredElementPrimaryKey: string | null =
       event.currentTarget.getAttribute("primary-key");
     const draggingElementPrimaryKey: string | null =
-      draggingObjectState.current.primaryKey;
+      draggingObjectState.current.point;
     const hoveredElementIndex: number = getElementIndex(dragList, hoveredElementPrimaryKey)
     const draggingElementIndex = getElementIndex(dragList, draggingElementPrimaryKey)
     const replaceList = replaceArrayElements(
