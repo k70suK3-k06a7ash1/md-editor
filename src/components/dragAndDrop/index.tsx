@@ -3,6 +3,7 @@ import { splitByTag } from "../../libs/splitByTag";
 import { Card } from "../card/index";
 import { ContentType } from "../../types/ContentType";
 import { makeBeNamedList } from "../../libs/feature/dragAndDrop/makeBeNamedList";
+import { getElementIndex } from "../../libs/feature/dragAndDrop/getElementIndex";
 
 type Props = {
   contents: string;
@@ -68,16 +69,8 @@ export const useDragComponents = ({ contents }: Props) => {
       event.currentTarget.getAttribute("primary-key");
     const draggingElementPrimaryKey: string | null =
       draggingObjectState.current.primaryKey;
-    const hoveredElementIndex: number = dragList.findIndex(
-      (contentObject: ContentType) => {
-        return contentObject.id == Number(hoveredElementPrimaryKey);
-      }
-    );
-    const draggingElementIndex = dragList.findIndex(
-      (contentObject: ContentType) => {
-        return contentObject.id == Number(draggingElementPrimaryKey);
-      }
-    );
+    const hoveredElementIndex: number = getElementIndex(dragList, hoveredElementPrimaryKey)
+    const draggingElementIndex = getElementIndex(dragList, draggingElementPrimaryKey)
     const replaceList = replaceArrayElements(
       dragList,
       hoveredElementIndex,
