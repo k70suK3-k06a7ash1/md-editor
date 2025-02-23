@@ -1,8 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeading, fa2 } from "@fortawesome/free-solid-svg-icons";
+import { Heading2 } from "lucide-react";
 export const H2Icon = (): JSX.Element => (
-  <i>
-    <FontAwesomeIcon icon={faHeading} />
-    <FontAwesomeIcon icon={fa2} />
-  </i>
+	<i>
+		<Heading2 />
+	</i>
 );

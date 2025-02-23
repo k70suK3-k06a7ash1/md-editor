@@ -1,5 +1,4 @@
-import { faFileLines } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FileText } from "lucide-react";
 import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
@@ -48,7 +47,7 @@ export const TemplateSection = () => {
 				{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
 				<label className={style.container}>
 					<i>
-						<FontAwesomeIcon className={style.icon} icon={faFileLines} />
+						<FileText className={style.icon} />
 					</i>
 					<Spacer horizontal size={4} />
 					<div>Use Template</div>

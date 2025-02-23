@@ -1,6 +1,5 @@
 import type { Dispatch, ChangeEvent } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileImport } from "@fortawesome/free-solid-svg-icons";
+import { FileInput } from "lucide-react";
 import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
@@ -11,7 +10,7 @@ export const FileImport = ({ handleClick }: Props) => (
 	<TabItem>
 		<label className={style.container}>
 			<i>
-				<FontAwesomeIcon className={style.icon} icon={faFileImport} />
+				<FileInput className={style.icon} />
 			</i>
 			<Spacer horizontal size={4} />
 			<div>Import</div>
