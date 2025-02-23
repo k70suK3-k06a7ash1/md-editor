@@ -1,8 +1,6 @@
-import React, { ReactNode } from "react";
+import type { PropsWithChildren } from "react";
 import style from "./style.module.css";
-type Props = {
-	children: ReactNode;
-};
-export const Card = ({ children }: Props) => (
+
+export const Card = ({ children }: PropsWithChildren) => (
 	<div className={style.cardContainer}>{children}</div>
 );
