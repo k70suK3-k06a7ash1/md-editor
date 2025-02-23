@@ -1,12 +1,9 @@
-import React, { ReactNode } from "react";
 import style from "./style.module.css";
 import { Header } from "./Header";
 import { TabBar } from "./TabBar";
-type Props = {
-	children: ReactNode;
-};
+import type { PropsWithChildren } from "react";
 
-export const Frame = (props: Props) => {
+export const Frame = (props: PropsWithChildren) => {
 	return (
 		<>
 			<Header />
