@@ -9,6 +9,7 @@ type Props = {
 };
 export const AddSection = ({ handleAddSection }: Props) => (
 	<TabItem>
+		{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
 		<label className={style.container}>
 			<i>
 				<FontAwesomeIcon className={style.icon} icon={faSquarePlus} />
