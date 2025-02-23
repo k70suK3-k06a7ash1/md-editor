@@ -1,11 +1,11 @@
 import { type DragEvent, useRef } from "react";
-import { getElementIndex } from "~/libs/feature/dragAndDrop/getElementIndex";
+import { getElementIndex } from "~/features/drag-and-drop/lib/getElementIndex";
 import type { PositionType } from "~/types";
 import {
 	handleDragStart,
 	handleDragOver,
-} from "~/libs/feature/dragAndDrop/handleDrag";
-import { reSortArrayElements } from "~/libs/feature/dragAndDrop/reSortArrayElements";
+} from "~/features/drag-and-drop/lib/handleDrag";
+import { reSortArrayElements } from "~/features/drag-and-drop/lib/reSortArrayElements";
 import { useMarkdownContext } from "~/context/MarkdownContext";
 
 export const useDragAndDrop = () => {

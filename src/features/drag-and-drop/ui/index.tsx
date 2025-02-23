@@ -1,9 +1,9 @@
-import { CardSection } from "../card/index";
+import { CardSection } from "~/features/markdown-editor/ui";
 
 import style from "./style.module.css";
-import { useUpdateContent } from "~/hooks/useUpdateContents";
-import { useDeleteContent } from "~/hooks/useDeleteContents";
-import { useDragAndDrop } from "~/hooks/useDragAndDrop";
+import { useUpdateContent } from "~/features/markdown-editor/model/useUpdateContents";
+import { useDeleteContent } from "~/features/markdown-editor/model/useDeleteContents";
+import { useDragAndDrop } from "~/features/drag-and-drop/model/useDragAndDrop";
 import { useMarkdownContext } from "~/context/MarkdownContext";
 
 export const useDragComponents = () => {

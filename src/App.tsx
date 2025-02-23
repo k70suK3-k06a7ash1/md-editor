@@ -1,5 +1,5 @@
 import "github-markdown-css/github-markdown-dark.css";
-import { useDragComponents } from "./components/features/dragAndDrop";
+import { useDragComponents } from "./features/drag-and-drop/ui";
 import { Frame } from "./layouts/Frame";
 import { MainContent } from "./layouts/MainContent";
 import style from "./index.module.css";
