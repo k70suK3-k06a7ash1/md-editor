@@ -1,8 +1,8 @@
-import { FC, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import style from "./style.module.css";
 type Props = {
-  children: ReactNode;
+	children: ReactNode;
 };
-export const MainContent: FC<Props> = ({ children }) => (
-  <div className={style.mainContainer}>{children}</div>
+export const MainContent = ({ children }: Props) => (
+	<div className={style.mainContainer}>{children}</div>
 );
