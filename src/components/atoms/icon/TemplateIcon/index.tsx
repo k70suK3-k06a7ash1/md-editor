@@ -1,57 +1,56 @@
-import { FC } from "react";
 import { faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
-import { LanguageKey } from "~/types/figurative/LanguageType";
+import type { LanguageKey } from "~/types/figurative/LanguageType";
 import { useModal } from "react-hooks-use-modal";
 import { SetTemplateModal } from "~/components/features/setTemplateModal";
-import { useSetRecoilState } from "recoil";
-import { markdownContentTypeSelector } from "~/recoil/selectors/markdown/markdownContentTypeSelector";
 import { languageAndReadmeMap } from "~/constants/languageAndReadmeMap";
 import { useSplitByTag } from "~/hooks/useSplitByTag";
+import { useMarkdownContext } from "~/context/MarkdownContext";
 
-export const TemplateSection: FC = () => {
-  const { splitByTag } = useSplitByTag();
-  const set = useSetRecoilState(markdownContentTypeSelector);
+export const TemplateSection = () => {
+	const { splitByTag } = useSplitByTag();
+	const { setMarkdown: set } = useMarkdownContext();
 
-  const [Modal, open, close] = useModal("root", {
-    preventScroll: true,
-    focusTrapOptions: {
-      clickOutsideDeactivates: false,
-    },
-  });
+	const [Modal, open, close] = useModal("root", {
+		preventScroll: true,
+		focusTrapOptions: {
+			clickOutsideDeactivates: false,
+		},
+	});
 
-  const handleSetTemplate = (languageKey: LanguageKey) => {
-    if (languageKey === undefined) {
-      throw new Error("language key is undefined");
-    }
-    const defaultReadme = languageAndReadmeMap[languageKey];
-    const origin = splitByTag(defaultReadme);
-    const makedContents = origin?.map((content, index) => {
-      return { id: index, content: content };
-    });
+	const handleSetTemplate = (languageKey: LanguageKey) => {
+		if (languageKey === undefined) {
+			throw new Error("language key is undefined");
+		}
+		const defaultReadme = languageAndReadmeMap[languageKey];
+		const origin = splitByTag(defaultReadme);
+		const makedContents = origin?.map((content, index) => {
+			return { id: index, content: content };
+		});
 
-    set(makedContents);
-  };
+		set(makedContents);
+	};
 
-  return (
-    <>
-      <Modal>
-        <SetTemplateModal handleClose={close} handleApply={handleSetTemplate} />
-      </Modal>
+	return (
+		<>
+			<Modal>
+				<SetTemplateModal handleClose={close} handleApply={handleSetTemplate} />
+			</Modal>
 
-      <TabItem>
-        <label className={style.container}>
-          <i>
-            <FontAwesomeIcon className={style.icon} icon={faFileLines} />
-          </i>
-          <Spacer horizontal size={4} />
-          <div>Use Template</div>
-          <button onClick={open} type="button" />
-        </label>
-      </TabItem>
-    </>
-  );
+			<TabItem>
+				{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
+				<label className={style.container}>
+					<i>
+						<FontAwesomeIcon className={style.icon} icon={faFileLines} />
+					</i>
+					<Spacer horizontal size={4} />
+					<div>Use Template</div>
+					<button onClick={open} type="button" />
+				</label>
+			</TabItem>
+		</>
+	);
 };

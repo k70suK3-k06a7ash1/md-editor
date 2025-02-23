@@ -1,27 +1,26 @@
-import { useRecoilState, useSetRecoilState } from "recoil";
-import { markdownContentTypeSelector } from "~/recoil/selectors/markdown/markdownContentTypeSelector";
 import { useSplitByTag } from "~/hooks/useSplitByTag";
-import { ContentType } from "~/types";
+import type { ContentType } from "~/types";
+import { useMarkdownContext } from "~/context/MarkdownContext";
 
 export const useDeleteContent = () => {
-  const { splitByTag } = useSplitByTag();
-  const [markdown, set] = useRecoilState(markdownContentTypeSelector);
+	const { splitByTag } = useSplitByTag();
+	const { markdown, setMarkdown: set } = useMarkdownContext();
 
-  const deleteContents = (content: ContentType) => {
-    const cloneContent = [...markdown];
-    cloneContent[content.id] = content;
-    const markdwonAsString = cloneContent
-      .filter(({ id }) => id !== content.id)
-      .map(({ content }) => content)
-      .join("\n");
+	const deleteContents = (content: ContentType) => {
+		const cloneContent = [...markdown];
+		cloneContent[content.id] = content;
+		const markdwonAsString = cloneContent
+			.filter(({ id }) => id !== content.id)
+			.map(({ content }) => content)
+			.join("\n");
 
-    const origin = splitByTag(markdwonAsString ?? "");
+		const origin = splitByTag(markdwonAsString ?? "");
 
-    const makedContents = origin?.map((content, index) => {
-      return { id: index, content: content };
-    }, []);
-    set(makedContents);
-  };
+		const makedContents = origin?.map((content, index) => {
+			return { id: index, content: content };
+		}, []);
+		set(makedContents);
+	};
 
-  return { deleteContents };
+	return { deleteContents };
 };
