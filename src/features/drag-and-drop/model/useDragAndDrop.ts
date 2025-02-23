@@ -1,6 +1,6 @@
 import { type DragEvent, useRef } from "react";
 import { getElementIndex } from "~/features/drag-and-drop/lib/getElementIndex";
-import type { PositionType } from "~/types";
+import type { PositionType } from "src/types";
 import {
 	handleDragStart,
 	handleDragOver,
