@@ -1,10 +1,6 @@
-import { ReactNode } from "react";
+import type { PropsWithChildren } from "react";
 import style from "./style.module.css";
-type IconContainerProps = {
-  children: ReactNode;
-};
-export const IconContainer = ({
-  children,
-}: IconContainerProps): JSX.Element => (
-  <div className={style.iconContainer}>{children}</div>
+
+export const IconContainer = ({ children }: PropsWithChildren): JSX.Element => (
+	<div className={style.iconContainer}>{children}</div>
 );
