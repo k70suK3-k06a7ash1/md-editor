@@ -20,7 +20,11 @@ export const EditMode = ({
 
 	const handleUpdateContents = () => {
 		isIncludeTag(editContent.split("\n")[0])
-			? updateContents({ id: content.id, content: editContent })
+			? updateContents({
+					id: content.id,
+					content: editContent,
+					level: content.level,
+				})
 			: window.alert("The first line must have one to two # symbols");
 	};
 	return (

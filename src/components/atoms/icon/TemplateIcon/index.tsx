@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
-import type { LanguageKey } from "~/types/figurative/LanguageType";
+import type { LanguageKey, SeparateLevelType } from "~/types";
 import { useModal } from "react-hooks-use-modal";
 import { SetTemplateModal } from "~/components/features/setTemplateModal";
 import { languageAndReadmeMap } from "~/constants/languageAndReadmeMap";
@@ -28,7 +28,11 @@ export const TemplateSection = () => {
 		const defaultReadme = languageAndReadmeMap[languageKey];
 		const origin = splitByTag(defaultReadme);
 		const makedContents = origin?.map((content, index) => {
-			return { id: index, content: content };
+			return {
+				id: String(index),
+				content: content,
+				level: "h1" as SeparateLevelType,
+			};
 		});
 
 		set(makedContents);

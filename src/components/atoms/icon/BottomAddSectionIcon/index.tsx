@@ -1,5 +1,4 @@
-import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { PlusCircle } from "lucide-react";
 import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
@@ -17,7 +16,7 @@ export const BottomAddSection = () => {
 					{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
 					<label className={style.container}>
 						<i>
-							<FontAwesomeIcon className={style.icon} icon={faCirclePlus} />
+							<PlusCircle className={style.icon} />
 						</i>
 						<Spacer horizontal size={4} />
 						<div>Add Section</div>

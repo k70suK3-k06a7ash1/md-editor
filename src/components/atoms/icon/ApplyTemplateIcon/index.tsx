@@ -1,6 +1,5 @@
 import type { DispatchWithoutAction } from "react";
-import { faFileArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FileUp } from "lucide-react";
 import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 import { IncludeIconButton } from "~/styles/IncludeIconButton";
@@ -12,7 +11,7 @@ export const ApplyTemplateIcon = ({ handleApply }: Props) => (
 		{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
 		<label className={style.container}>
 			<i>
-				<FontAwesomeIcon className={style.icon} icon={faFileArrowUp} />
+				<FileUp className={style.icon} />
 			</i>
 			<Spacer horizontal size={4} />
 			<div>Apply the template</div>

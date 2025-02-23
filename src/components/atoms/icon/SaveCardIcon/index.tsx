@@ -1,7 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { DispatchWithoutAction } from "react";
 import { IconContainer } from "../../iconContainer";
-import { faFloppyDisk } from "@fortawesome/free-regular-svg-icons";
+import { Save } from "lucide-react";
 import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 type SaveCardIconProps = {
@@ -20,7 +19,7 @@ export const SaveCardIcon = ({
 				toggleIsEdit();
 			}}
 		>
-			<FontAwesomeIcon className={style.saveCardIcon} icon={faFloppyDisk} />
+			<Save className={style.saveCardIcon} />
 			<Spacer horizontal size={8} />
 			Save
 		</i>

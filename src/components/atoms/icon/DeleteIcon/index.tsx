@@ -1,6 +1,5 @@
 import type { DispatchWithoutAction } from "react";
-import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { XCircle } from "lucide-react";
 import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 
@@ -16,7 +15,7 @@ export const DeleteIcon = ({ handleDelete }: DeleteIconProps) => (
 				handleDelete();
 			}}
 		>
-			<FontAwesomeIcon className={style.icon} icon={faCircleXmark} />
+			<XCircle className={style.icon} />
 		</i>
 		<Spacer horizontal size={4} />
 	</label>

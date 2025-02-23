@@ -30,7 +30,7 @@ export const CardSection = ({
 	}, false);
 	const handleDelete = () => {
 		content.content.length === 0
-			? updateContents({ id: content.id, content: "" })
+			? updateContents({ id: content.id, content: "", level: content.level })
 			: deleteContents(content);
 	};
 

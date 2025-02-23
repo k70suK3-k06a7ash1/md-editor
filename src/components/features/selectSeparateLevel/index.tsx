@@ -1,6 +1,5 @@
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { H1Icon, H2Icon, H3Icon } from "./level";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import style from "./index.module.css";
 import { useSeparateLevel } from "~/hooks/useSeparateLevel";
 export const SelectSeparateLevel = () => {
@@ -12,7 +11,7 @@ export const SelectSeparateLevel = () => {
 			<span>Current Level: {separateLevel}</span>
 			{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 			<i onClick={() => onClickDecrement()}>
-				<FontAwesomeIcon className={style.icon} icon={faArrowLeft} />
+				<ArrowLeft className={style.icon} />
 			</i>
 			{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 			<i onClick={() => onClickByLevel("h1")}>
@@ -28,7 +27,7 @@ export const SelectSeparateLevel = () => {
 			</i>{" "}
 			{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 			<i onClick={() => onClickIncrement()}>
-				<FontAwesomeIcon className={style.icon} icon={faArrowRight} />
+				<ArrowRight className={style.icon} />
 			</i>
 		</div>
 	);

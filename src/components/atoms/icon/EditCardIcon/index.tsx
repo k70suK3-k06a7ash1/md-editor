@@ -1,7 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { DispatchWithoutAction } from "react";
 import { IconContainer } from "../../iconContainer";
-import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
+import { Pencil } from "lucide-react";
 import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 type EditCardIconProps = {
@@ -17,7 +16,7 @@ export const EditCardIcon = ({
 				toggleIsEdit();
 			}}
 		>
-			<FontAwesomeIcon className={style.icon} icon={faPenToSquare} />
+			<Pencil className={style.icon} />
 			<Spacer horizontal size={8} />
 			Edit
 		</i>

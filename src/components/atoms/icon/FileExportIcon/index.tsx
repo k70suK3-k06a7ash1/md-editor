@@ -1,6 +1,5 @@
 import type { DispatchWithoutAction } from "react";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Download } from "lucide-react";
 import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
@@ -12,7 +11,7 @@ export const FileExport = ({ handleMarkdownDownload }: Props) => (
 		{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
 		<label className={style.container}>
 			<i>
-				<FontAwesomeIcon className={style.icon} icon={faDownload} />
+				<Download className={style.icon} />
 			</i>
 			<Spacer horizontal size={4} />
 			<div>Export</div>

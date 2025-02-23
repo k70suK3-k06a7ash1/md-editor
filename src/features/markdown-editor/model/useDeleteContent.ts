@@ -1,5 +1,5 @@
 import { useSplitByTag } from "~/hooks/useSplitByTag";
-import type { ContentType } from "~/types";
+import type { ContentType, SeparateLevelType } from "~/types";
 import { useMarkdownContext } from "~/context/MarkdownContext";
 
 export const useDeleteContent = () => {
@@ -8,7 +8,7 @@ export const useDeleteContent = () => {
 
 	const deleteContents = (content: ContentType) => {
 		const cloneContent = [...markdown];
-		cloneContent[content.id] = content;
+		cloneContent[Number(content.id)] = content;
 		const markdwonAsString = cloneContent
 			.filter(({ id }) => id !== content.id)
 			.map(({ content }) => content)
@@ -17,7 +17,11 @@ export const useDeleteContent = () => {
 		const origin = splitByTag(markdwonAsString ?? "");
 
 		const makedContents = origin?.map((content, index) => {
-			return { id: index, content: content };
+			return {
+				id: String(index),
+				content: content,
+				level: "h1" as SeparateLevelType,
+			};
 		}, []);
 		set(makedContents);
 	};

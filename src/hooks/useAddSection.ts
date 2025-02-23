@@ -12,8 +12,9 @@ export const useAddSection = () => {
 			const origin = splitByTag(contents);
 			const addOrigin = [...origin, "# "];
 			return addOrigin?.map((content, index) => ({
-				id: index,
+				id: String(index),
 				content: content,
+				level: "h1",
 			}));
 		});
 		scrollToBottom();
