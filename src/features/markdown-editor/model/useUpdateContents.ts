@@ -5,8 +5,11 @@ export const useUpdateContent = () => {
 	const { markdown, setMarkdown: set } = useMarkdownContext();
 	const updateContents = (content: ContentType) => {
 		const cloneContent = [...markdown];
-		cloneContent[content.id] = content;
-		set(cloneContent);
+		const index = cloneContent.findIndex((item) => item.id === content.id);
+		if (index !== -1) {
+			cloneContent[index] = content;
+			set(cloneContent);
+		}
 	};
 	return { updateContents };
 };

@@ -1,2 +1,1 @@
-declare module "*.md";
-declare module "*.module.css";
+declare module "react-hooks-use-modal";
