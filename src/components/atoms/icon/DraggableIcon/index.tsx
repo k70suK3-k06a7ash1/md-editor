@@ -5,6 +5,7 @@ import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 
 export const DraggableIcon = () => (
+	// biome-ignore lint/a11y/noLabelWithoutControl: <explanation>
 	<label className={style.container}>
 		<i>
 			<FontAwesomeIcon className={style.icon} icon={faGripVertical} />
