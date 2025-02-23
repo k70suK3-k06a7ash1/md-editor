@@ -6,7 +6,7 @@ import {
 	type SetStateAction,
 	type PropsWithChildren,
 } from "react";
-import type { ContentType, SeparateLevelType } from "~/types";
+import type { ContentType, SeparateLevelType } from "../types/index.ts";
 
 interface MarkdownContextProps {
 	markdown: ContentType[];

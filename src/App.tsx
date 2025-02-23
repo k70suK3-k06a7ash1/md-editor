@@ -1,16 +1,16 @@
 import "github-markdown-css/github-markdown-dark.css";
-import { useDragComponents } from "./features/drag-and-drop/ui";
-import { Frame } from "./layouts/Frame";
-import { MainContent } from "./layouts/MainContent";
+import { useDragComponents } from "./features/drag-and-drop/ui/index.tsx";
+import { Frame } from "./layouts/Frame/index.tsx";
+import { MainContent } from "./layouts/MainContent/index.tsx";
 import style from "./index.module.css";
-import { Section } from "./layouts/Section";
-import { Spacer } from "./components/atoms/Spacer";
-import { PreviewSection } from "./components/features/previewSection";
-import { BottomAddSection } from "./components/atoms/icon/BottomAddSectionIcon";
-import { useViewControl } from "./hooks/useViewControl";
-import { SelectSeparateLevel } from "./components/features/selectSeparateLevel";
-import { SubContent } from "./layouts/SubContent";
-import { useMarkdownContext } from "~/context/MarkdownContext";
+import { Section } from "./layouts/Section/index.tsx";
+import { Spacer } from "./components/atoms/Spacer/index.tsx";
+import { PreviewSection } from "./components/features/previewSection/index.tsx";
+import { BottomAddSection } from "./components/atoms/icon/BottomAddSectionIcon/index.tsx";
+import { useViewControl } from "./hooks/useViewControl.tsx";
+import { SelectSeparateLevel } from "./components/features/selectSeparateLevel/index.tsx";
+import { SubContent } from "./layouts/SubContent/index.tsx";
+import { useMarkdownContext } from "./context/MarkdownContext.tsx";
 
 export const App = () => {
 	const { markdown: contents } = useMarkdownContext();

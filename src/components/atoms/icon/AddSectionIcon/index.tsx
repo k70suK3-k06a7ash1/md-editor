@@ -1,21 +1,14 @@
-import type { DispatchWithoutAction } from "react";
+import type { DispatchWithoutAction, FC } from "react";
 import { PlusSquare } from "lucide-react";
-import style from "./style.module.css";
-import { Spacer } from "../../Spacer";
-import { TabItem } from "../../../../styles/tabItem";
+import { Button } from "~/components/ui/button.tsx";
+
 type Props = {
 	handleAddSection: DispatchWithoutAction;
 };
-export const AddSection = ({ handleAddSection }: Props) => (
-	<TabItem>
-		{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
-		<label className={style.container}>
-			<i>
-				<PlusSquare className={style.icon} />
-			</i>
-			<Spacer horizontal size={4} />
-			<div>Add Section</div>
-			<button onClick={handleAddSection} type="button" />
-		</label>
-	</TabItem>
+
+export const AddSection: FC<Props> = ({ handleAddSection }) => (
+	<Button variant="ghost" size="icon" onClick={handleAddSection}>
+		<PlusSquare className="h-4 w-4 mr-2" />
+		Add Section
+	</Button>
 );

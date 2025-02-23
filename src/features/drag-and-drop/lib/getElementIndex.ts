@@ -1,4 +1,4 @@
-import type { ContentType } from "~/types";
+import type { ContentType } from "~/types/index.ts";
 
 export const getElementIndex = (
 	contentsList: ContentType[],

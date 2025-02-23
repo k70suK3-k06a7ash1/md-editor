@@ -1,5 +1,5 @@
 import type { MutableRefObject } from "react";
-import type { PositionType } from "~/types";
+import type { PositionType } from "~/types/index.ts";
 
 export const handleDragStart = (
 	event: React.DragEvent,
