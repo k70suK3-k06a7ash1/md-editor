@@ -1,9 +1,9 @@
-import { RefObject } from "react";
+import type { RefObject } from "react";
 
 export const scrollIntoViewCurrentRef = (
-  currentRef: RefObject<HTMLDivElement>
+	currentRef: RefObject<HTMLDivElement>,
 ) =>
-  currentRef?.current?.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
+	currentRef?.current?.scrollIntoView({
+		behavior: "smooth",
+		block: "start",
+	});
