@@ -1,15 +1,5 @@
 import subprocess
 
-
-
-
-
-
-
-
-
-
-
 def delete_commits(commit, metadata):
     # 削除したいコミットのハッシュをリストで指定
     delete_list = [
@@ -27,3 +17,4 @@ def delete_commits(commit, metadata):
     if commit.commit_id in delete_list:
         return False  # コミットをスキップ (削除)
     return True  # コミットを保持
+
