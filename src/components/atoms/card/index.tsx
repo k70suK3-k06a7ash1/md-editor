@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from "react";
 
 export const Card = ({ children }: PropsWithChildren) => (
-	<div className="rounded-lg border-3 border-gray-800 bg-gray-200 w-full overflow-hidden">
+	<div className="rounded-lg border border-gray-300 bg-white w-full overflow-hidden shadow-sm">
 		{children}
 	</div>
 );

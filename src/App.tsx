@@ -22,15 +22,12 @@ export const App = () => {
 			<div>
 				<Frame>
 					<Spacer size={24} />
-					<SubContent>
-						<SelectSeparateLevel />
-					</SubContent>
 					<MainContent>
 						<Section>
 							<h2 className="text-2xl font-semibold">Edit</h2>
 							<DragAndDropArea />
 							<Spacer size={24} />
-							{contents.length > 0 && <BottomAddSection />}
+							<BottomAddSection />
 						</Section>
 						<Section>
 							<h2 className="text-2xl font-semibold">Preview</h2>

@@ -5,6 +5,7 @@ import { ClearIcon } from "@/components/atoms/icon/ClearIcon/index.tsx";
 import { useAddSection } from "@/hooks/useAddSection.ts";
 import { useRenderDownloadButton } from "@/features/drag-and-drop/ui/useRenderDownloadButton.tsx";
 import { useOnFileInputChange } from "@/hooks/useOnFileInputChange.ts";
+import { SelectSeparateLevel } from "@/components/features/selectSeparateLevel";
 
 export const TabBar = (): JSX.Element => {
 	const { handleAddSection } = useAddSection();
@@ -16,11 +17,12 @@ export const TabBar = (): JSX.Element => {
 			<div className="flex gap-6">
 				<AddSection handleAddSection={handleAddSection} />
 				<TemplateSection />
+				<FileImport handleClick={onFileInputChange} />
 				<ClearIcon />
+				<SelectSeparateLevel />
 			</div>
 
 			<div className="flex gap-6">
-				<FileImport handleClick={onFileInputChange} />
 				<DownloadButton />
 			</div>
 		</div>
