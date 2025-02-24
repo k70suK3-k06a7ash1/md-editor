@@ -6,7 +6,7 @@ import type { LanguageKey, SeparateLevelType } from "@/types";
 import { languageAndReadmeMap } from "@/constants/languageAndReadmeMap";
 import { useSplitByTag } from "@/hooks/useSplitByTag";
 import { useMarkdownContext } from "@/context/MarkdownContext";
-// import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 export const TemplateSection = () => {
 	const { splitByTag } = useSplitByTag();
@@ -42,17 +42,14 @@ export const TemplateSection = () => {
 				<SetTemplateModal handleClose={close} handleApply={handleSetTemplate} />
 			</Modal> */}
 
-			<TabItem>
-				{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
-				<label className="cursor-pointer flex h-full items-center">
-					<i>
-						<FileText className="text-xl" />
-					</i>
-					<Spacer horizontal size={4} />
-					<div>Use Template</div>
-					{/* <Button onClick={open} type="button" /> */}
-				</label>
-			</TabItem>
+			{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
+			<Button>
+				<i>
+					<FileText className="text-xl" />
+				</i>
+				<Spacer horizontal size={4} />
+				<div>Use Template</div>
+			</Button>
 		</>
 	);
 };
