@@ -1,12 +1,12 @@
 import type { Dispatch, ChangeEvent } from "react";
 import { FileInput } from "lucide-react";
 import { Spacer } from "../../Spacer";
-import { TabItem } from "../../../../styles/tabItem";
+import { Button } from "@/components/ui/button";
 type Props = {
 	handleClick: Dispatch<ChangeEvent<HTMLInputElement>>;
 };
 export const FileImport = ({ handleClick }: Props) => (
-	<TabItem>
+	<Button>
 		<label className="cursor-pointer flex h-full items-center">
 			<i>
 				<FileInput className="text-xl" />
@@ -20,5 +20,5 @@ export const FileImport = ({ handleClick }: Props) => (
 				className="hidden"
 			/>
 		</label>
-	</TabItem>
+	</Button>
 );

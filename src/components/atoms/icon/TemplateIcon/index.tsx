@@ -1,6 +1,5 @@
 import { FileText } from "lucide-react";
 import { Spacer } from "../../Spacer";
-import { TabItem } from "../../../../styles/tabItem";
 import type { LanguageKey, SeparateLevelType } from "@/types";
 // import { SetTemplateModal } from "@/components/features/setTemplateModal";
 import { languageAndReadmeMap } from "@/constants/languageAndReadmeMap";
