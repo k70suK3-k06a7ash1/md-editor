@@ -2,6 +2,7 @@ import { PlusCircle } from "lucide-react";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
 import { useAddSection } from "@/hooks/useAddSection";
+import { Button } from "@/components/ui/button";
 
 export const BottomAddSection = () => {
 	const { handleAddSection } = useAddSection();
@@ -19,7 +20,7 @@ export const BottomAddSection = () => {
 						</i>
 						<Spacer horizontal size={4} />
 						<div>Add Section</div>
-						<button onClick={handleAddSection} type="button" />
+						<Button onClick={handleAddSection} type="button" />
 					</label>
 				</TabItem>
 			</div>
