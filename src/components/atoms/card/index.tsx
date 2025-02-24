@@ -1,6 +1,7 @@
 import type { PropsWithChildren } from "react";
-import style from "./style.module.css";
 
 export const Card = ({ children }: PropsWithChildren) => (
-	<div className={style.cardContainer}>{children}</div>
+	<div className="rounded-lg border-3 border-gray-800 bg-gray-200 w-full overflow-hidden">
+		{children}
+	</div>
 );

@@ -1,17 +1,16 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { H1Icon, H2Icon, H3Icon } from "./level";
-import style from "./index.module.css";
 import { useSeparateLevel } from "~/hooks/useSeparateLevel";
 export const SelectSeparateLevel = () => {
 	const { separateLevel, onClickByLevel, onClickDecrement, onClickIncrement } =
 		useSeparateLevel();
 
 	return (
-		<div className={style.wrapper}>
+		<div className="flex gap-4 items-center">
 			<span>Current Level: {separateLevel}</span>
 			{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 			<i onClick={() => onClickDecrement()}>
-				<ArrowLeft className={style.icon} />
+				<ArrowLeft />
 			</i>
 			{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 			<i onClick={() => onClickByLevel("h1")}>
@@ -27,7 +26,7 @@ export const SelectSeparateLevel = () => {
 			</i>{" "}
 			{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 			<i onClick={() => onClickIncrement()}>
-				<ArrowRight className={style.icon} />
+				<ArrowRight />
 			</i>
 		</div>
 	);

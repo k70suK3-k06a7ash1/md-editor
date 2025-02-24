@@ -2,7 +2,6 @@ import type { DispatchWithoutAction } from "react";
 import ReactMarkdown from "react-markdown";
 import { EditCardIcon } from "~/components/atoms/icon/EditCardIcon";
 import remarkGfm from "remark-gfm";
-import style from "./style.module.css";
 
 type DisplayCardProps = {
 	toggleIsEdit: DispatchWithoutAction;
@@ -13,8 +12,8 @@ export const DisplayMode = ({
 	contentMarkdown,
 }: DisplayCardProps) => {
 	return (
-		<div className={`${style.wrapper} markdown-body ${style.filterInvert}`}>
-			<div className={style.iconPosition}>
+		<div className="p-0 px-4 pb-4 rounded-lg markdown-body filter invert">
+			<div className="absolute top-2 right-4">
 				<EditCardIcon toggleIsEdit={toggleIsEdit} />
 			</div>
 			<ReactMarkdown remarkPlugins={[remarkGfm]}>

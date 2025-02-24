@@ -5,7 +5,6 @@ import { CancelIcon } from "~/components/atoms/icon/CancelIcon";
 import { Spacer } from "~/components/atoms/Spacer";
 import type { LanguageKey } from "~/types/figurative/LanguageType";
 import { LanguageSelected } from "../language";
-import style from "./style.module.css";
 
 type Props = {
 	handleClose: DispatchWithoutAction;
@@ -20,13 +19,13 @@ export const SetTemplateModal = ({ handleClose, handleApply }: Props) => {
 	};
 
 	return (
-		<div className={style.modalContainer}>
-			<div className={style.modalSelectSection}>
+		<div className="rounded-lg p-6 text-gray-800 bg-gray-100 w-[450px] h-[300px]">
+			<div className="flex justify-center">
 				<h1>Please select a language.</h1>
 			</div>
 			<Spacer size={24} />
 
-			<div className={style.modalSelectSection}>
+			<div className="flex justify-center">
 				<div>
 					<LanguageSelected
 						defaultKey={languageKey}
@@ -36,7 +35,7 @@ export const SetTemplateModal = ({ handleClose, handleApply }: Props) => {
 			</div>
 
 			<Spacer size={48} />
-			<div className={style.modalBottomButtonSection}>
+			<div className="flex justify-around">
 				<CancelIcon handleCancel={handleClose} />
 				<ApplyTemplateIcon handleApply={handleOnClickApplyTemplate} />
 			</div>
