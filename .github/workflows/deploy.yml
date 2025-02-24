@@ -53,7 +53,7 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
+
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
