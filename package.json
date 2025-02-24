@@ -19,7 +19,8 @@
 		"react-dom": "^18.3.1",
 		"react-hooks-use-modal": "^3.3.1",
 		"react-markdown": "^8.0.7",
-		"remark-gfm": "^3.0.1"
+		"remark-gfm": "^3.0.1",
+		"tailwindcss-animate": "^1.0.7"
 	},
 	"devDependencies": {
 		"@radix-ui/react-slot": "^1.1.2",
