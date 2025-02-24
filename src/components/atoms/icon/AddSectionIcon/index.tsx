@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const AddSection = ({ handleAddSection }: Props): JSX.Element => (
-	<Button variant="ghost" size="icon" onClick={handleAddSection}>
+	<Button onClick={handleAddSection}>
 		<PlusSquare className="h-4 w-4 mr-2" />
 		Add Section
 	</Button>
