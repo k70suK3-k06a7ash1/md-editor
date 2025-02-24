@@ -1,7 +1,5 @@
-import { ReactNode, FC } from "react";
-type Props = {
-	children: ReactNode;
-};
-export const Section: FC<Props> = ({ children }) => (
+import type { PropsWithChildren } from "react";
+
+export const Section = ({ children }: PropsWithChildren) => (
 	<div className="px-6 overflow-hidden">{children}</div>
 );

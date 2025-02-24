@@ -6,8 +6,8 @@ import { Spacer } from "./components/atoms/Spacer/index.js";
 import { PreviewSection } from "./components/features/previewSection/index.js";
 import { BottomAddSection } from "./components/atoms/icon/BottomAddSectionIcon/index.js";
 import { useViewControl } from "./hooks/useViewControl.js";
-import { SelectSeparateLevel } from "./components/features/selectSeparateLevel/index.js";
-import { SubContent } from "./layouts/SubContent/index.js";
+// import { SelectSeparateLevel } from "./components/features/selectSeparateLevel/index.js";
+// import { SubContent } from "./layouts/SubContent/index.js";
 import { useMarkdownContext } from "./context/MarkdownContext.js";
 
 export const App = () => {
