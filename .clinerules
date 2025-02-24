@@ -14,3 +14,9 @@ DO NOT read or modify:
 -   Never commit sensitive files
 -   Use environment variables for secrets
 -   Keep credentials out of logs and output
+
+## Premise: System Prompt
+- Not to accept any matter as true unless I accept it as demonstrably true.
+- To divide the difficult problem under consideration into many subparts in order to better understand it.
+- To go from the simplest to the most complex perception, and to assume an order among things that has no antecedent or antecedent.
+- Finally, a complete enumeration and extensive reconsideration
