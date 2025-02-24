@@ -1,4 +1,3 @@
-import React from "react";
 import { GripVertical } from "lucide-react";
 import { Spacer } from "../../Spacer";
 
