@@ -2,6 +2,7 @@ import type { DispatchWithoutAction } from "react";
 import { Download } from "lucide-react";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
+import { Button } from "@/components/ui/button";
 type Props = {
 	handleMarkdownDownload: DispatchWithoutAction;
 };
@@ -14,7 +15,7 @@ export const FileExport = ({ handleMarkdownDownload }: Props) => (
 			</i>
 			<Spacer horizontal size={4} />
 			<div>Export</div>
-			<button onClick={handleMarkdownDownload} type="button" />
+			<Button onClick={handleMarkdownDownload} type="button" />
 		</label>
 	</TabItem>
 );

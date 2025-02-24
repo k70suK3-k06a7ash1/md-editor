@@ -2,22 +2,22 @@ import { FileText } from "lucide-react";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
 import type { LanguageKey, SeparateLevelType } from "@/types";
-import { useModal } from "react-hooks-use-modal";
-import { SetTemplateModal } from "@/components/features/setTemplateModal";
+// import { SetTemplateModal } from "@/components/features/setTemplateModal";
 import { languageAndReadmeMap } from "@/constants/languageAndReadmeMap";
 import { useSplitByTag } from "@/hooks/useSplitByTag";
 import { useMarkdownContext } from "@/context/MarkdownContext";
+// import { Button } from "@/components/ui/button";
 
 export const TemplateSection = () => {
 	const { splitByTag } = useSplitByTag();
 	const { setMarkdown: set } = useMarkdownContext();
 
-	const [Modal, open, close] = useModal("root", {
-		preventScroll: true,
-		focusTrapOptions: {
-			clickOutsideDeactivates: false,
-		},
-	});
+	// const [Modal, open, close] = useModal("root", {
+	// 	preventScroll: true,
+	// 	focusTrapOptions: {
+	// 		clickOutsideDeactivates: false,
+	// 	},
+	// });
 
 	const handleSetTemplate = (languageKey: LanguageKey) => {
 		if (languageKey === undefined) {
@@ -38,9 +38,9 @@ export const TemplateSection = () => {
 
 	return (
 		<>
-			<Modal>
+			{/* <Modal>
 				<SetTemplateModal handleClose={close} handleApply={handleSetTemplate} />
-			</Modal>
+			</Modal> */}
 
 			<TabItem>
 				{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
@@ -50,7 +50,7 @@ export const TemplateSection = () => {
 					</i>
 					<Spacer horizontal size={4} />
 					<div>Use Template</div>
-					<button onClick={open} type="button" />
+					{/* <Button onClick={open} type="button" /> */}
 				</label>
 			</TabItem>
 		</>
