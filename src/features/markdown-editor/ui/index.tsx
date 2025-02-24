@@ -1,9 +1,4 @@
-import {
-	type Dispatch,
-	useReducer,
-	type DragEvent,
-	type DragEventHandler,
-} from "react";
+import { type Dispatch, useReducer, type DragEventHandler } from "react";
 
 import { Card } from "@/components/atoms/card";
 import { DraggableIcon } from "@/components/atoms/icon/DraggableIcon";
