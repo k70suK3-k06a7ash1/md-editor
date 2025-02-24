@@ -8,7 +8,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
 	plugins: [react(), tailwindcss(), tsconfigPaths()],
 	assetsInclude: ["**/*.md"],
-	base: "./",
+	base: "/md-editor/",
 	resolve: {
 		alias: {
 			"~": path.resolve(__dirname, "src"),
