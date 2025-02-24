@@ -1,7 +1,6 @@
 import { FileText } from "lucide-react";
 import { Spacer } from "../../Spacer";
 import type { LanguageKey, SeparateLevelType } from "@/types";
-// import { SetTemplateModal } from "@/components/features/setTemplateModal";
 import { languageAndReadmeMap } from "@/constants/languageAndReadmeMap";
 import { useSplitByTag } from "@/hooks/useSplitByTag";
 import { useMarkdownContext } from "@/context/MarkdownContext";
@@ -10,13 +9,6 @@ import { Button } from "@/components/ui/button";
 export const TemplateSection = () => {
 	const { splitByTag } = useSplitByTag();
 	const { setMarkdown: set } = useMarkdownContext();
-
-	// const [Modal, open, close] = useModal("root", {
-	// 	preventScroll: true,
-	// 	focusTrapOptions: {
-	// 		clickOutsideDeactivates: false,
-	// 	},
-	// });
 
 	const handleSetTemplate = (languageKey: LanguageKey) => {
 		if (languageKey === undefined) {
