@@ -10,8 +10,9 @@ export const reSortArrayElements = (
 	stringArray.splice(hoveredIndex, 0, element);
 
 	const reNumberingList: ContentType[] = stringArray.map((content, index) => ({
-		id: index,
+		id: String(index),
 		content,
+		level: "h1",
 	}));
 	return reNumberingList;
 };
