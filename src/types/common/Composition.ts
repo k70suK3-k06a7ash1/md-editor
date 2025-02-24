@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 export type Composition = {
-  children: ReactNode;
+	children: ReactNode;
 };
