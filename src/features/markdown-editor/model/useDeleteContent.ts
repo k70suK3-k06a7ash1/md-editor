@@ -1,6 +1,6 @@
-import { useSplitByTag } from "~/hooks/useSplitByTag";
-import type { ContentType, SeparateLevelType } from "~/types";
-import { useMarkdownContext } from "~/context/MarkdownContext";
+import { useSplitByTag } from "@/hooks/useSplitByTag";
+import type { ContentType, SeparateLevelType } from "@/types";
+import { useMarkdownContext } from "@/context/MarkdownContext";
 
 export const useDeleteContent = () => {
 	const { splitByTag } = useSplitByTag();

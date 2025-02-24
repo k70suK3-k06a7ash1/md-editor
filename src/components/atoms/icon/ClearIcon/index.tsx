@@ -1,7 +1,7 @@
 import { Eraser } from "lucide-react";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
-import { useMarkdownContext } from "~/context/MarkdownContext";
+import { useMarkdownContext } from "@/context/MarkdownContext";
 
 export const ClearIcon = () => {
 	const { setMarkdown } = useMarkdownContext();

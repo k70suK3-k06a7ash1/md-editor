@@ -1,5 +1,5 @@
 import { useSplitByTag } from "./useSplitByTag";
-import type { SeparateLevelType } from "~/types";
+import type { SeparateLevelType } from "@/types";
 export const useMakeContents = () => {
 	const { splitByTag } = useSplitByTag();
 

@@ -1,5 +1,5 @@
-import type { SeparateLevelType } from "~/types";
-import { useMarkdownContext } from "~/context/MarkdownContext";
+import type { SeparateLevelType } from "@/types";
+import { useMarkdownContext } from "@/context/MarkdownContext";
 
 export const useSeparateLevel = () => {
 	const { separateLevel, setSeparateLevel: set } = useMarkdownContext();

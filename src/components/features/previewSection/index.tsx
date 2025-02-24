@@ -1,4 +1,4 @@
-import type { ContentType } from "~/types";
+import type { ContentType } from "@/types";
 import ReactMarkdown from "react-markdown";
 
 import remarkGfm from "remark-gfm";

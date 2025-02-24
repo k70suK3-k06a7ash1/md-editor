@@ -1,9 +1,9 @@
 import { type Dispatch, type DispatchWithoutAction, useState } from "react";
 import {} from "react";
-import { ApplyTemplateIcon } from "~/components/atoms/icon/ApplyTemplateIcon";
-import { CancelIcon } from "~/components/atoms/icon/CancelIcon";
-import { Spacer } from "~/components/atoms/Spacer";
-import type { LanguageKey } from "~/types/figurative/LanguageType";
+import { ApplyTemplateIcon } from "@/components/atoms/icon/ApplyTemplateIcon";
+import { CancelIcon } from "@/components/atoms/icon/CancelIcon";
+import { Spacer } from "@/components/atoms/Spacer";
+import type { LanguageKey } from "@/types/figurative/LanguageType";
 import { LanguageSelected } from "../language";
 
 type Props = {

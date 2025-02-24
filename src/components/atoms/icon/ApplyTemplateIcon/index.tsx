@@ -1,7 +1,7 @@
 import type { DispatchWithoutAction } from "react";
 import { FileUp } from "lucide-react";
 import { Spacer } from "../../Spacer";
-import { IncludeIconButton } from "~/styles/IncludeIconButton";
+import { IncludeIconButton } from "@/styles/IncludeIconButton";
 type Props = {
 	handleApply: DispatchWithoutAction;
 };

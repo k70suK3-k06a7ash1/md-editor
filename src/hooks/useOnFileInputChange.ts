@@ -1,5 +1,5 @@
-import { useMakeContents } from "~/hooks/useMakeContents";
-import { useMarkdownContext } from "~/context/MarkdownContext";
+import { useMakeContents } from "@/hooks/useMakeContents";
+import { useMarkdownContext } from "@/context/MarkdownContext";
 
 export const useOnFileInputChange = () => {
 	const { makeContents } = useMakeContents();

@@ -1,12 +1,12 @@
 import { FileText } from "lucide-react";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
-import type { LanguageKey, SeparateLevelType } from "~/types";
+import type { LanguageKey, SeparateLevelType } from "@/types";
 import { useModal } from "react-hooks-use-modal";
-import { SetTemplateModal } from "~/components/features/setTemplateModal";
-import { languageAndReadmeMap } from "~/constants/languageAndReadmeMap";
-import { useSplitByTag } from "~/hooks/useSplitByTag";
-import { useMarkdownContext } from "~/context/MarkdownContext";
+import { SetTemplateModal } from "@/components/features/setTemplateModal";
+import { languageAndReadmeMap } from "@/constants/languageAndReadmeMap";
+import { useSplitByTag } from "@/hooks/useSplitByTag";
+import { useMarkdownContext } from "@/context/MarkdownContext";
 
 export const TemplateSection = () => {
 	const { splitByTag } = useSplitByTag();

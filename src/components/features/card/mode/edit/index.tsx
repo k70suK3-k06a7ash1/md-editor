@@ -1,7 +1,7 @@
 import { type Dispatch, type DispatchWithoutAction, useState } from "react";
-import type { ContentType } from "~/types";
-import { SaveCardIcon } from "~/components/atoms/icon/SaveCardIcon";
-import { useIsIncludeTag } from "~/hooks/useIsIncludeTag";
+import type { ContentType } from "@/types";
+import { SaveCardIcon } from "@/components/atoms/icon/SaveCardIcon";
+import { useIsIncludeTag } from "@/hooks/useIsIncludeTag";
 
 type EditCardProps = {
 	content: ContentType;

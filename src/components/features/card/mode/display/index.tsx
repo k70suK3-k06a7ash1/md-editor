@@ -1,6 +1,6 @@
 import type { DispatchWithoutAction } from "react";
 import ReactMarkdown from "react-markdown";
-import { EditCardIcon } from "~/components/atoms/icon/EditCardIcon";
+import { EditCardIcon } from "@/components/atoms/icon/EditCardIcon";
 import remarkGfm from "remark-gfm";
 
 type DisplayCardProps = {

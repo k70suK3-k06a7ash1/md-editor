@@ -1,6 +1,6 @@
 import type { DispatchWithoutAction, FC } from "react";
 import { PlusSquare } from "lucide-react";
-import { Button } from "~/components/ui/button.tsx";
+import { Button } from "@/components/ui/button.tsx";
 
 type Props = {
 	handleAddSection: DispatchWithoutAction;

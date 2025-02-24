@@ -1,6 +1,6 @@
-import { useViewControl } from "~/hooks/useViewControl";
-import { useSplitByTag } from "~/hooks/useSplitByTag";
-import { useMarkdownContext } from "~/context/MarkdownContext";
+import { useViewControl } from "@/hooks/useViewControl";
+import { useSplitByTag } from "@/hooks/useSplitByTag";
+import { useMarkdownContext } from "@/context/MarkdownContext";
 
 export const useAddSection = () => {
 	const { splitByTag } = useSplitByTag();

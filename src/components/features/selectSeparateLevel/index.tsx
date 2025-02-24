@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { H1Icon, H2Icon, H3Icon } from "./level";
-import { useSeparateLevel } from "~/hooks/useSeparateLevel";
+import { useSeparateLevel } from "@/hooks/useSeparateLevel";
 export const SelectSeparateLevel = () => {
 	const { separateLevel, onClickByLevel, onClickDecrement, onClickIncrement } =
 		useSeparateLevel();

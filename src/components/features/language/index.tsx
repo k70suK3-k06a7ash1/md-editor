@@ -1,5 +1,5 @@
 import type { ChangeEvent, Dispatch } from "react";
-import type { LanguageKey } from "~/types/figurative/LanguageType";
+import type { LanguageKey } from "@/types/figurative/LanguageType";
 
 type LanguageSelectedProps = {
 	defaultKey: LanguageKey;

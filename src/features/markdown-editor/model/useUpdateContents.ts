@@ -1,5 +1,5 @@
-import { useMarkdownContext } from "~/context/MarkdownContext";
-import type { ContentType } from "~/types";
+import { useMarkdownContext } from "@/context/MarkdownContext";
+import type { ContentType } from "@/types";
 
 export const useUpdateContent = () => {
 	const { markdown, setMarkdown: set } = useMarkdownContext();

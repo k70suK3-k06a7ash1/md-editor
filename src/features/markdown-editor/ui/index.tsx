@@ -1,12 +1,12 @@
 import { type Dispatch, useReducer, type DragEvent } from "react";
 
-import { Card } from "~/components/atoms/card";
-import { DraggableIcon } from "~/components/atoms/icon/DraggableIcon";
-import { Spacer } from "~/components/atoms/Spacer";
-import { DeleteIcon } from "~/components/atoms/icon/DeleteIcon";
-import { EditMode } from "~/components/features/card/mode/edit";
-import { DisplayMode } from "~/components/features/card/mode/display";
-import type { ContentType } from "~/types";
+import { Card } from "@/components/atoms/card";
+import { DraggableIcon } from "@/components/atoms/icon/DraggableIcon";
+import { Spacer } from "@/components/atoms/Spacer";
+import { DeleteIcon } from "@/components/atoms/icon/DeleteIcon";
+import { EditMode } from "@/components/features/card/mode/edit";
+import { DisplayMode } from "@/components/features/card/mode/display";
+import type { ContentType } from "@/types";
 type Props = {
 	content: ContentType;
 	updateContents: Dispatch<ContentType>;

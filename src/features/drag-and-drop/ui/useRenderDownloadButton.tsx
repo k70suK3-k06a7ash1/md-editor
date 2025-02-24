@@ -1,5 +1,5 @@
-import { FileExport } from "~/components/atoms/icon/FileExportIcon/index";
-import { useMarkdownContext } from "~/context/MarkdownContext";
+import { FileExport } from "@/components/atoms/icon/FileExportIcon/index";
+import { useMarkdownContext } from "@/context/MarkdownContext";
 
 export const useRenderDownloadButton = () => {
 	const { markdown: contents } = useMarkdownContext();

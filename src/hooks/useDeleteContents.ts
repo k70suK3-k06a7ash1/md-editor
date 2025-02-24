@@ -1,1 +1,1 @@
-export { useDeleteContent } from "~/features/markdown-editor/model/useDeleteContent";
+export { useDeleteContent } from "@/features/markdown-editor/model/useDeleteContent";

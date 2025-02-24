@@ -1,5 +1,5 @@
-import { patternH1, patternH2, patternH3 } from "~/libs/common/patterns";
-import { useMarkdownContext } from "~/context/MarkdownContext";
+import { patternH1, patternH2, patternH3 } from "@/libs/common/patterns";
+import { useMarkdownContext } from "@/context/MarkdownContext";
 
 export const useSwitchPatternBySeparateLevel = () => {
 	const { separateLevel } = useMarkdownContext();

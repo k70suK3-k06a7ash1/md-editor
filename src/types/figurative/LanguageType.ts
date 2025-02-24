@@ -1,3 +1,3 @@
-import { languageAndReadmeMap } from "~/constants/languageAndReadmeMap";
+import { languageAndReadmeMap } from "@/constants/languageAndReadmeMap";
 type LanguageKeyType = typeof languageAndReadmeMap;
 export type LanguageKey = keyof LanguageKeyType;

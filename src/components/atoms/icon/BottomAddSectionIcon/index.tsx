@@ -1,7 +1,7 @@
 import { PlusCircle } from "lucide-react";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
-import { useAddSection } from "~/hooks/useAddSection";
+import { useAddSection } from "@/hooks/useAddSection";
 
 export const BottomAddSection = () => {
 	const { handleAddSection } = useAddSection();

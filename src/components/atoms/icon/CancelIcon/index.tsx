@@ -1,6 +1,6 @@
 import type { DispatchWithoutAction, FC } from "react";
 import { RotateCw } from "lucide-react";
-import { Button } from "~/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 type Props = {
 	handleCancel: DispatchWithoutAction;
