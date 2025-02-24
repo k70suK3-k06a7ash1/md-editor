@@ -1,8 +1,6 @@
-import "github-markdown-css/github-markdown-dark.css";
 import { useDragComponents } from "./features/drag-and-drop/ui/index.js";
 import { Frame } from "./layouts/Frame/index.js";
 import { MainContent } from "./layouts/MainContent/index.js";
-import style from "./index.module.css";
 import { Section } from "./layouts/Section/index.js";
 import { Spacer } from "./components/atoms/Spacer/index.js";
 import { PreviewSection } from "./components/features/previewSection/index.js";
@@ -21,7 +19,7 @@ export const App = () => {
 	return (
 		<>
 			<TopAnchor />
-			<div className={style.root}>
+			<div>
 				<Frame>
 					<Spacer size={24} />
 					<SubContent>
@@ -29,13 +27,13 @@ export const App = () => {
 					</SubContent>
 					<MainContent>
 						<Section>
-							<h2 className={style.sectionTitle}>Edit</h2>
+							<h2>Edit</h2>
 							<DragAndDropArea />
 							<Spacer size={24} />
 							{contents.length > 0 && <BottomAddSection />}
 						</Section>
 						<Section>
-							<h2 className={style.sectionTitle}>Preview</h2>
+							<h2>Preview</h2>
 							<PreviewSection contents={contents} />
 							<Spacer size={16} />
 						</Section>
