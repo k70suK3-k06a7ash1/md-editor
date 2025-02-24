@@ -42,7 +42,7 @@ export const TemplateSection = () => {
 			</Modal> */}
 
 			{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
-			<Button>
+			<Button onClick={() => handleSetTemplate("english")}>
 				<i>
 					<FileText className="text-xl" />
 				</i>
