@@ -1,7 +1,6 @@
 import type { DispatchWithoutAction } from "react";
 import { IconContainer } from "../../iconContainer";
 import { Pencil } from "lucide-react";
-import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 type EditCardIconProps = {
 	toggleIsEdit: DispatchWithoutAction;
@@ -16,7 +15,7 @@ export const EditCardIcon = ({
 				toggleIsEdit();
 			}}
 		>
-			<Pencil className={style.icon} />
+			<Pencil className="cursor-pointer text-xl" />
 			<Spacer horizontal size={8} />
 			Edit
 		</i>

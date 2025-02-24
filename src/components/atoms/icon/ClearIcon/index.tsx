@@ -1,5 +1,4 @@
 import { Eraser } from "lucide-react";
-import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
 import { useMarkdownContext } from "~/context/MarkdownContext";
@@ -10,9 +9,9 @@ export const ClearIcon = () => {
 	return (
 		<TabItem>
 			{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
-			<label className={style.container}>
+			<label className="cursor-pointer flex h-full items-center">
 				<i>
-					<Eraser className={style.icon} />
+					<Eraser className="text-xl" />
 				</i>
 				<Spacer horizontal size={4} />
 				<div>Clear</div>

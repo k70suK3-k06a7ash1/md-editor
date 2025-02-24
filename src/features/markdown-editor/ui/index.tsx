@@ -1,7 +1,6 @@
 import { type Dispatch, useReducer, type DragEvent } from "react";
 
 import { Card } from "~/components/atoms/card";
-import style from "./style.module.css";
 import { DraggableIcon } from "~/components/atoms/icon/DraggableIcon";
 import { Spacer } from "~/components/atoms/Spacer";
 import { DeleteIcon } from "~/components/atoms/icon/DeleteIcon";
@@ -13,8 +12,8 @@ type Props = {
 	updateContents: Dispatch<ContentType>;
 	deleteContents: Dispatch<ContentType>;
 	dragOver: Dispatch<DragEvent>;
-	dragStart: Dispatch<DragEvent>;
-	handleDrop: Dispatch<DragEvent>;
+	dragStart: DragEvent;
+	handleDrop: DragEvent;
 };
 
 export const CardSection = ({
@@ -37,7 +36,7 @@ export const CardSection = ({
 	return (
 		<>
 			{isEdit || content.content === "# " ? (
-				<div className={style.editCardSection}>
+				<div className="flex items-center justify-start">
 					{/* substitute DraggableIcon */}
 					<DeleteIcon handleDelete={handleDelete} />
 					<Spacer horizontal size={12} />
@@ -58,7 +57,7 @@ export const CardSection = ({
 					onDragStart={dragStart}
 					onDragOver={dragOver}
 				>
-					<div className={style.cardSection}>
+					<div className="cursor-grab flex items-center justify-start">
 						<DraggableIcon />
 						<Spacer horizontal size={12} />
 						<Card>

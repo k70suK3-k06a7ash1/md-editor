@@ -1,7 +1,0 @@
-.mainContainer {
-  display: flex;
-}
-
-.mainContainer > div {
-  width: 50%;
-}

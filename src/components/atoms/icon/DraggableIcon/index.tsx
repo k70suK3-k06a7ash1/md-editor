@@ -1,13 +1,12 @@
 import React from "react";
 import { GripVertical } from "lucide-react";
-import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 
 export const DraggableIcon = () => (
 	// biome-ignore lint/a11y/noLabelWithoutControl: <explanation>
-	<label className={style.container}>
+	<label className="cursor-inherit flex h-full items-center">
 		<i>
-			<GripVertical className={style.icon} />
+			<GripVertical className="text-xl" />
 		</i>
 		<Spacer horizontal size={4} />
 	</label>

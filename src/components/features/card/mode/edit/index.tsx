@@ -1,6 +1,5 @@
 import { type Dispatch, type DispatchWithoutAction, useState } from "react";
 import type { ContentType } from "~/types";
-import style from "./style.module.css";
 import { SaveCardIcon } from "~/components/atoms/icon/SaveCardIcon";
 import { useIsIncludeTag } from "~/hooks/useIsIncludeTag";
 
@@ -28,15 +27,15 @@ export const EditMode = ({
 			: window.alert("The first line must have one to two # symbols");
 	};
 	return (
-		<div className={style.wrapper}>
-			<div className={style.iconPosition}>
+		<div className="relative">
+			<div className="absolute top-2 right-4">
 				<SaveCardIcon
 					updateContents={handleUpdateContents}
 					toggleIsEdit={toggleIsEdit}
 				/>
 			</div>
 			<textarea
-				className={style.textArea}
+				className="w-full h-[20vh] text-base border-2 border-[#e0e0e0] rounded-md p-2 box-border bg-[#e0e0e0]"
 				value={editContent}
 				onChange={(event) => {
 					setEditContent(event.target.value);

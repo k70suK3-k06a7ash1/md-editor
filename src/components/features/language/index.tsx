@@ -1,6 +1,5 @@
 import type { ChangeEvent, Dispatch } from "react";
 import type { LanguageKey } from "~/types/figurative/LanguageType";
-import style from "./style.module.css";
 
 type LanguageSelectedProps = {
 	defaultKey: LanguageKey;
@@ -10,8 +9,9 @@ export const LanguageSelected = ({
 	defaultKey,
 	handleChangeLanguage,
 }: LanguageSelectedProps): JSX.Element => (
-	<div className={style.languageSelector}>
+	<div>
 		<select
+			className="cursor-pointer rounded-full border-3 border-[#424040] border-solid h-full w-[25vw] text-base p-2"
 			defaultValue={defaultKey}
 			onChange={(event: ChangeEvent<HTMLSelectElement>) => {
 				handleChangeLanguage(event.currentTarget.value as LanguageKey);

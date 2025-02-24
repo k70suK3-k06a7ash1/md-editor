@@ -1,4 +1,3 @@
-import style from "./style.module.css";
 import { FileImport } from "~/components/atoms/icon/FileImportIcon/index.tsx";
 import { AddSection } from "~/components/atoms/icon/AddSectionIcon/index.tsx";
 import { TemplateSection } from "~/components/atoms/icon/TemplateIcon/index.tsx";
@@ -13,14 +12,14 @@ export const TabBar = (): JSX.Element => {
 	const { DownloadButton } = useRenderDownloadButton();
 	const { onFileInputChange } = useOnFileInputChange();
 	return (
-		<div className={style.tabBarContainer}>
-			<div className={style.startContent}>
+		<div className="py-2 px-6 flex justify-between">
+			<div className="flex gap-6">
 				<AddSection handleAddSection={handleAddSection} />
 				<TemplateSection />
 				<ClearIcon />
 			</div>
 
-			<div className={style.endContent}>
+			<div className="flex gap-6">
 				<FileImport handleClick={onFileInputChange} />
 				<DownloadButton />
 			</div>

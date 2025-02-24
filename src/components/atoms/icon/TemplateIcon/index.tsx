@@ -1,5 +1,4 @@
 import { FileText } from "lucide-react";
-import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 import { TabItem } from "../../../../styles/tabItem";
 import type { LanguageKey, SeparateLevelType } from "~/types";
@@ -45,9 +44,9 @@ export const TemplateSection = () => {
 
 			<TabItem>
 				{/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
-				<label className={style.container}>
+				<label className="cursor-pointer flex h-full items-center">
 					<i>
-						<FileText className={style.icon} />
+						<FileText className="text-xl" />
 					</i>
 					<Spacer horizontal size={4} />
 					<div>Use Template</div>

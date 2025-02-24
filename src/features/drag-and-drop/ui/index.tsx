@@ -1,6 +1,5 @@
 import { CardSection } from "~/features/markdown-editor/ui";
 
-import style from "./style.module.css";
 import { useUpdateContent } from "~/features/markdown-editor/model/useUpdateContents";
 import { useDeleteContent } from "~/features/markdown-editor/model/useDeleteContent";
 import { useDragAndDrop } from "~/features/drag-and-drop/model/useDragAndDrop";
@@ -13,7 +12,7 @@ export const useDragComponents = () => {
 	const { deleteContents } = useDeleteContent();
 
 	const DragAndDropArea = () => (
-		<div className={style.ContentAreaContainer}>
+		<div className="flex flex-col gap-6">
 			{markdown?.map((contentObject) => {
 				return (
 					<CardSection

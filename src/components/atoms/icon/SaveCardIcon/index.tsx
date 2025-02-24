@@ -1,7 +1,6 @@
 import type { DispatchWithoutAction } from "react";
 import { IconContainer } from "../../iconContainer";
 import { Save } from "lucide-react";
-import style from "./style.module.css";
 import { Spacer } from "../../Spacer";
 type SaveCardIconProps = {
 	updateContents: DispatchWithoutAction;
@@ -19,7 +18,7 @@ export const SaveCardIcon = ({
 				toggleIsEdit();
 			}}
 		>
-			<Save className={style.saveCardIcon} />
+			<Save className="cursor-pointer text-xl" />
 			<Spacer horizontal size={8} />
 			Save
 		</i>
