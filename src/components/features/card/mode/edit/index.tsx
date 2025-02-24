@@ -62,7 +62,7 @@ export const EditMode = ({
 	}, [handleUpdateContents]);
 
 	return (
-		<div className="relative">
+		<div className="relative w-full">
 			<div className="absolute top-2 right-4">
 				<SaveCardIcon
 					updateContents={handleUpdateContents}
@@ -71,7 +71,7 @@ export const EditMode = ({
 			</div>
 			<textarea
 				ref={textareaRef}
-				className="w-full text-base border-2 border-gray-300 rounded-md p-2 box-border bg-white resize-none shadow-sm"
+				className="w-full h-full text-base  rounded-md p-2  resize-none "
 				value={editContent}
 				onChange={(event) => {
 					setEditContent(event.target.value);
