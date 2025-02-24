@@ -35,7 +35,7 @@ export const EditMode = ({
 				/>
 			</div>
 			<textarea
-				className="w-full h-[20vh] text-base border-2 border-[#e0e0e0] rounded-md p-2 box-border bg-[#e0e0e0]"
+				className="w-full h-[20vh] text-base border-2 border-gray-200 rounded-md p-2 box-border bg-gray-200"
 				value={editContent}
 				onChange={(event) => {
 					setEditContent(event.target.value);

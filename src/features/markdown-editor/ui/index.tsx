@@ -1,4 +1,9 @@
-import { type Dispatch, useReducer, type DragEvent } from "react";
+import {
+	type Dispatch,
+	useReducer,
+	type DragEvent,
+	type DragEventHandler,
+} from "react";
 
 import { Card } from "@/components/atoms/card";
 import { DraggableIcon } from "@/components/atoms/icon/DraggableIcon";
@@ -11,9 +16,9 @@ type Props = {
 	content: ContentType;
 	updateContents: Dispatch<ContentType>;
 	deleteContents: Dispatch<ContentType>;
-	dragOver: Dispatch<DragEvent>;
-	dragStart: DragEvent;
-	handleDrop: DragEvent;
+	dragOver: DragEventHandler<HTMLDivElement>;
+	dragStart: DragEventHandler<HTMLDivElement>;
+	handleDrop: DragEventHandler<HTMLDivElement>;
 };
 
 export const CardSection = ({
@@ -56,6 +61,7 @@ export const CardSection = ({
 					onDrop={handleDrop}
 					onDragStart={dragStart}
 					onDragOver={dragOver}
+					className="active:cursor-grabbing"
 				>
 					<div className="cursor-grab flex items-center justify-start">
 						<DraggableIcon />

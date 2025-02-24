@@ -12,7 +12,7 @@ export const DisplayMode = ({
 	contentMarkdown,
 }: DisplayCardProps) => {
 	return (
-		<div className="p-0 px-4 pb-4 rounded-lg markdown-body filter invert">
+		<div className="p-4 pb-4 rounded-md markdown-body">
 			<div className="absolute top-2 right-4">
 				<EditCardIcon toggleIsEdit={toggleIsEdit} />
 			</div>

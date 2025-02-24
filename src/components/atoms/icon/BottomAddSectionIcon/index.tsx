@@ -6,7 +6,7 @@ import { useAddSection } from "@/hooks/useAddSection";
 export const BottomAddSection = () => {
 	const { handleAddSection } = useAddSection();
 	return (
-		<div className="flex items-center justify-start">
+		<div className="flex items-center justify-start bg-gray-100 rounded-md p-4">
 			<div>
 				<Spacer horizontal size={30} />
 			</div>
