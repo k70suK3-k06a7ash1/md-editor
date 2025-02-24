@@ -6,3 +6,7 @@ commit-rm:
 
 list:
 	bash commit-hash-list.sh
+
+
+c-b:
+	@git branch | grep -v "^\*" | xargs git branch -d
